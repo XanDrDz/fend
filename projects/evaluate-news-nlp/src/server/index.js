@@ -84,11 +84,11 @@ app.post("/test", async function (req, res) {
     let response = await fetch(apiUrl)
     let data = await response.json()
     
-    const evaluation = {}
-    evaluation.polarity = data.score_tag
-    evaluation.agreement = data.agreement
-    evaluation.irony = data.irony
-    evaluation.subjectivity = data.subjectivity
-    evaluation.confidence = data.confidence
-    res.send(evaluation)
+    const superdata = {}
+    superdata.polarity = data.score_tag
+    superdata.agreement = data.agreement
+    superdata.irony = data.irony
+    superdata.subjectivity = data.subjectivity
+    superdata.confidence = data.confidence
+    res.send(superdata)
 })
