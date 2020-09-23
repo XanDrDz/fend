@@ -3,7 +3,8 @@ function handleSubmit(event) {
 
     // check what text was put into the form field
     let formText = document.getElementById('name').value
-    Client.checkForName(formText)
+    if (Client.checkForName(formText) === true) {
+    
 
     console.log("::: Form Submitted :::")
     fetch('http://localhost:8081/test', {
@@ -23,4 +24,5 @@ function handleSubmit(event) {
         document.getElementById("irony").innerHTML = `Irony: ${res.irony}`;
     })
 }
+ else {alert("Input correct address")}}
 export { handleSubmit }

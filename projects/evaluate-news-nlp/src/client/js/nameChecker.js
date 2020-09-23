@@ -1,16 +1,11 @@
 function checkForName(inputText) {
     console.log("::: Running checkForName :::", inputText);
-    let names = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
+    let webAdress = document.getElementById('name').value
 
-    if(names.includes(inputText)) {
+    if(webAdress === "") {
         alert("Welcome, Captain!")
-    }
+        return false;
+    } else {return true}
 }
 
 export { checkForName }
