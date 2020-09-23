@@ -11,3 +11,4 @@ describe("Testing the submit functionality", () => {
            // The general syntax is `expect(myFunction(arg1, arg2, ...)).toEqual(expectedValue);`, where `toEqual()` is a matcher
            expect(checkForName).toBeDefined();
 })});
+
